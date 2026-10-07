@@ -1,0 +1,1249 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "GPTQMODEL",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CHIP_QUANTIZATION\\GPTQMODEL\\UPSTREAM_CLONE",
+  "git": {
+   "head": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE",
+   "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_verified_from": "local clone .git file read (no .git dir in clone)"
+  }
+ },
+ "metrics": {
+  "files_total": 1393,
+  "source_files_scanned": 1246,
+  "lines_of_code": 297356,
+  "languages": {
+   ".py": 1159,
+   ".cuh": 73,
+   ".cu": 46,
+   ".h": 27,
+   ".md": 20,
+   ".cpp": 16,
+   ".txt": 12,
+   ".yaml": 12,
+   ".hpp": 10,
+   "(none)": 7,
+   ".toml": 2,
+   ".sh": 2,
+   ".in": 1,
+   ".ini": 1,
+   ".pyi": 1
+  }
+ },
+ "licence": {
+  "spdx": "Apache-2.0",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 0,
+  "unique": 0,
+  "by_ecosystem": {},
+  "list": []
+ },
+ "owasp_top10": {
+  "total_findings": 332,
+  "files_with_findings": 315,
+  "severity": {
+   "high": 224,
+   "medium": 21,
+   "low": 87
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A03-Injection": {
+    "count": 224,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "setup.py",
+      "line": 13,
+      "cwe": "CWE-95",
+      "snippet": "exec(Path(\"gptqmodel/version.py\").read_text(encoding=\"utf-8\"), {}, version_vars)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_27b.py",
+      "line": 70,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_output)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_awq_formats.py",
+      "line": 113,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), format_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_awq_full_bits.py",
+      "line": 32,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(function())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_awq_group16.py",
+      "line": 24,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(baseline(x), candidate(x))"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_awq_group16_prefill.py",
+      "line": 27,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), candidate_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_awq_output_dtype.py",
+      "line": 20,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), new_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bitsandbytes_direct_input.py",
+      "line": 55,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(weight)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bitsandbytes_native.py",
+      "line": 24,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), native_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bnb_decode_threads.py",
+      "line": 63,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), candidate_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bnb_four_code_decode.py",
+      "line": 124,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_call(), candidate_call())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bnb_output_dtype.py",
+      "line": 70,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), candidate_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bnb_prefill_tile.py",
+      "line": 35,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(x)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_bnb_subnormal_stats.py",
+      "line": 112,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(packed, state[\"absmax\"], state[\"nested_absmax\"], state[\"offset\"])"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_block_ldl.py",
+      "line": 56,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_hessian)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_codebook.py",
+      "line": 56,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_encoded)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_fallback.py",
+      "line": 71,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_weight)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_fused_output.py",
+      "line": 56,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), pr_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_gss.py",
+      "line": 74,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_weight)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_hadamard.py",
+      "line": 64,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_source)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_hadamard_simd.py",
+      "line": 69,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(finite)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_hessian.py",
+      "line": 62,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_hessian, mlx_signs)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_ldlq.py",
+      "line": 76,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(mlx_weight, mlx_factor)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_output_dtype.py",
+      "line": 21,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(main_fn(), new_fn())"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_pack.py",
+      "line": 48,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(resident)"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 63,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "tests/test_bits.py",
+      "line": 66,
+      "cwe": "CWE-",
+      "snippet": "# TODO Only CUDA Quant Linear is tested for now"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_q4_torch.py",
+      "line": 52,
+      "cwe": "CWE-",
+      "snippet": "# TODO: pending pytorch fix https://github.com/pytorch/pytorch/issues/100932"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_qqq.py",
+      "line": 58,
+      "cwe": "CWE-",
+      "snippet": "# TODO FIXME: group_size 128 is failing this CI TEST!"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/model_test.py",
+      "line": 1661,
+      "cwe": "CWE-",
+      "snippet": "# TODO: make into shared method"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_gptbigcode.py",
+      "line": 10,
+      "cwe": "CWE-",
+      "snippet": "# TODO: find how intel_extension_for_pytorch registers its TorchScript interpreter."
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_gptneox.py",
+      "line": 9,
+      "cwe": "CWE-",
+      "snippet": "# TODO, this model requires 24G vram at least"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_hymba.py",
+      "line": 29,
+      "cwe": "CWE-",
+      "snippet": "OFFLOAD_TO_DISK = False # FIXME the issue where hymba does not work with OFFLOAD_TO_DISK=True"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_kimi_k25_support.py",
+      "line": 25,
+      "cwe": "CWE-",
+      "snippet": "# TODO, offload is unable to fix by now"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_ling_2_6_flash_support.py",
+      "line": 22,
+      "cwe": "CWE-",
+      "snippet": "# TODO, update scores"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_nemotron_labs_diffusion.py",
+      "line": 11,
+      "cwe": "CWE-",
+      "snippet": "# FIXME Evalution appears to be incompatible with NemoStation/Marlin-2B support; the original model's scores are also quite low."
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_nemotron_omni_support.py",
+      "line": 23,
+      "cwe": "CWE-",
+      "snippet": "# TODO, update scores later"
+     },
+     {
+      "severity": "low",
+      "file": "tests/kernels/test_gptq.py",
+      "line": 168,
+      "cwe": "CWE-",
+      "snippet": "AdapterCache.reset() # allow next load to complete since we are hacking to get consume only 1 lora module"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/swordfish/libtorch_stable/ops.h",
+      "line": 672,
+      "cwe": "CWE-",
+      "snippet": "// TODO(hc): cp_gather_cache need support scaled kvcahe in the future."
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/qqq/qqq_gemm.cu",
+      "line": 167,
+      "cwe": "CWE-",
+      "snippet": "// TODO(HandH1998): optimize dequant_per_group, as it doesn't have a very good performance for now"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/machete/generate.py",
+      "line": 211,
+      "cwe": "CWE-",
+      "snippet": "// TODO: Reimplement"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/exllamav3/quant/reconstruct.cu",
+      "line": 10,
+      "cwe": "CWE-",
+      "snippet": "// TODO: Benchmark, profile, unit test"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/awq/quantization_new/gemv/gemv_cuda.cu",
+      "line": 131,
+      "cwe": "CWE-",
+      "snippet": "// TODO: use make_divisible"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/awq/quantization/gemm_cuda_gen.cu",
+      "line": 262,
+      "cwe": "CWE-",
+      "snippet": "// TODO: Haotian: blockIdx_y / j_factors1 in A loading to support bsz > 16"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/awq/quantization/gemv_cuda.cu",
+      "line": 74,
+      "cwe": "CWE-",
+      "snippet": "// TODO (Haotian): zeros_w is incorrect, after fixing we got misaligned address"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/__init__.py",
+      "line": 20,
+      "cwe": "CWE-",
+      "snippet": "# TODO: waiting for official fix from triton"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/bitblas.py",
+      "line": 64,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Avoid loading the model with wrong QuantLinear, and directly use"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/hf.py",
+      "line": 2062,
+      "cwe": "CWE-",
+      "snippet": "# TODO FIXME! Pre-quantized use AutoModelForCausalLM.from_pretrained() but post-quantized use AutoModelForCausalLM.from_config()"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/importer.py",
+      "line": 754,
+      "cwe": "CWE-",
+      "snippet": "allow_marlin=True, # TODO: remove this after marlin padding is fixed"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/looper_helpers.py",
+      "line": 500,
+      "cwe": "CWE-",
+      "snippet": "# TODO: rehome was done during cloning, is it still needed there?"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/mmlupro.py",
+      "line": 276,
+      "cwe": "CWE-",
+      "snippet": "# FIXME: mmlu_pro doesn't have auto-batch, must be integer"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 19,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "tests/test_quant_and_eora.py",
+      "line": 58,
+      "cwe": "CWE-489",
+      "snippet": "# DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/model_test.py",
+      "line": 166,
+      "cwe": "CWE-489",
+      "snippet": "DEBUG = True # enable extra debug output"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/paroquant_first_layer_case_helper.py",
+      "line": 43,
+      "cwe": "CWE-1188",
+      "snippet": "\"stream\": _env_flag(f\"{env_prefix}_STREAMING\", default=True),"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/test_ling.py",
+      "line": 22,
+      "cwe": "CWE-489",
+      "snippet": "DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/test_multi_vs_single_gpu.py",
+      "line": 56,
+      "cwe": "CWE-489",
+      "snippet": "DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/test_qwen3_moe.py",
+      "line": 74,
+      "cwe": "CWE-489",
+      "snippet": "# DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/test_qwen3_next.py",
+      "line": 34,
+      "cwe": "CWE-489",
+      "snippet": "# DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/models/test_qwen3_omni.py",
+      "line": 22,
+      "cwe": "CWE-489",
+      "snippet": "# DEBUG = True"
+     },
+     {
+      "severity": "medium",
+      "file": "scripts/evaluate_qwen35_moe_multimodal_calibration.py",
+      "line": 1054,
+      "cwe": "CWE-1188",
+      "snippet": "parser.add_argument(\"--sym\", action=argparse.BooleanOptionalAction, default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "scripts/paroquant_first_layer_ab.py",
+      "line": 35,
+      "cwe": "CWE-1188",
+      "snippet": "default=True,"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/quantization/config.py",
+      "line": 1255,
+      "cwe": "CWE-1188",
+      "snippet": "default=True,"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/quantization/paroquant/optimization.py",
+      "line": 595,
+      "cwe": "CWE-1188",
+      "snippet": "env_flag(\"GPTQMODEL_PAROQUANT_OPT_FUSED_ROTATION\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/quantization/paroquant/modules/triton/gemm.py",
+      "line": 31,
+      "cwe": "CWE-1188",
+      "snippet": "FP32_ACCUM = env_flag(\"GPTQMODEL_FP32_ACCUM\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/quantization/awq/modules/triton/gemm.py",
+      "line": 27,
+      "cwe": "CWE-1188",
+      "snippet": "FP32_ACCUM = env_flag(\"GPTQMODEL_FP32_ACCUM\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/nn_modules/qlinear/gemm_awq.py",
+      "line": 22,
+      "cwe": "CWE-1188",
+      "snippet": "FP32_ACCUM = env_flag(\"GPTQMODEL_FP32_ACCUM\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/nn_modules/qlinear/gemm_awq_triton.py",
+      "line": 31,
+      "cwe": "CWE-1188",
+      "snippet": "FP32_ACCUM = env_flag(\"GPTQMODEL_FP32_ACCUM\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/nn_modules/qlinear/marlin.py",
+      "line": 137,
+      "cwe": "CWE-1188",
+      "snippet": "self.fp32 = env_flag(\"GPTQMODEL_MARLIN_USE_FP32\", default=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/nn_modules/qlinear/paroquant.py",
+      "line": 32,
+      "cwe": "CWE-1188",
+      "snippet": "\"GPTQMODEL_PAROQUANT_AUTO_CACHE_BF16_RUNTIME_DTYPE\", default=True"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/adapter/peft.py",
+      "line": 163,
+      "cwe": "CWE-1188",
+      "snippet": "default=True,"
+     }
+    ]
+   },
+   "A06-VulnerableComponents": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "format/format.sh",
+      "line": 6,
+      "cwe": "CWE-1104",
+      "snippet": "pip install -U ruff==0.14.2"
+     }
+    ]
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 23,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "tests/test_adapter_config.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_bits_new.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_lora.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_olora_finetuning_xpu.py",
+      "line": 7,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_openai_server.py",
+      "line": 46,
+      "cwe": "CWE-319",
+      "snippet": "client = openai.Client(base_url=f\"http://{self.HOST}:{self.PORT}/v1\", api_key=\"None\")"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_post_quant_eora.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_tgi.py",
+      "line": 23,
+      "cwe": "CWE-319",
+      "snippet": "url = f\"http://127.0.0.1:{port}/generate_stream\""
+     },
+     {
+      "severity": "low",
+      "file": "tests/fixtures/mimo_v2/modeling_mimo_v2.py",
+      "line": 10,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/qqq/qqq_gemm.cu",
+      "line": 14,
+      "cwe": "CWE-319",
+      "snippet": "*         http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/qqq/qqq_gemm.h",
+      "line": 13,
+      "cwe": "CWE-319",
+      "snippet": "*         http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/marlin/gptq_marlin.cu",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "*         http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/marlin/marlin_template.h",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "*         http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/cutlass_extensions/vllm_cutlass_library_extension.py",
+      "line": 35,
+      "cwe": "CWE-",
+      "snippet": "VLLMDataTypeTag: dict[VLLMDataType | DataType, str] = {"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel_ext/awq/quantization_new/gemv/gemv_cuda.cu",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "*     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/utils/openai_server.py",
+      "line": 127,
+      "cwe": "CWE-319",
+      "snippet": "print(f\"GPT-QModel OpenAi Server has started asynchronously at http://{host}:{port}.\")"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/quantization/rotation/hadamard_utils.py",
+      "line": 269,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.neilsloane.com/hadamard/index.html"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/quantization/paroquant/modules/triton/gemm.py",
+      "line": 12,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/quantization/awq/modules/triton/gemm.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/nn_modules/qlinear/marlin.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "docs/eora/eora_generation.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "docs/eora/eora_load_and_inference.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "docs/eora/evaluation.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "docs/eora/post_quant_eora_generation.py",
+      "line": 8,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     }
+    ]
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 2,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "scripts/generate_exl3_kernel_map_packed.py",
+      "line": 73,
+      "cwe": "CWE-918",
+      "snippet": "with urlopen(url, timeout=timeout) as response:"
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel/utils/machete.py",
+      "line": 217,
+      "cwe": "CWE-918",
+      "snippet": "with urllib.request.urlopen(url) as response, partial.open(\"wb\") as handle:"
+     }
+    ]
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 134,
+  "files_with_findings": 132,
+  "severity": {
+   "high": 19,
+   "medium": 107,
+   "low": 8
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 5,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "tests/test_offload_files.py",
+      "line": 155,
+      "cwe": "CWE-1336",
+      "snippet": "class _AttrBufferTemplate(nn.Module):"
+     },
+     {
+      "severity": "low",
+      "file": "tests/models/test_deepseek_vl_v2.py",
+      "line": 144,
+      "cwe": "CWE-1427",
+      "snippet": "#     system_prompt=\"\","
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel_ext/marlin/generate_kernels.py",
+      "line": 195,
+      "cwe": "CWE-1336",
+      "snippet": "template_str = jinja2.Template(TEMPLATE).render("
+     },
+     {
+      "severity": "medium",
+      "file": "gptqmodel_ext/machete/generate.py",
+      "line": 437,
+      "cwe": "CWE-1336",
+      "snippet": "template = jinja2.Template(template_str)"
+     },
+     {
+      "severity": "low",
+      "file": "gptqmodel/models/definitions/deepseek_vl_v2.py",
+      "line": 173,
+      "cwe": "CWE-1427",
+      "snippet": "system_prompt=\"\","
+     }
+    ]
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 104,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "tests/awq_test_utils.py",
+      "line": 66,
+      "cwe": "CWE-494",
+      "snippet": "_TOKENIZER = AutoTokenizer.from_pretrained(PRETRAINED_MODEL_ID, use_fast=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/checkpoint_quantization_driver.py",
+      "line": 77,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(args.model)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/inference_speed.py",
+      "line": 60,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model_path)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_awq_moe.py",
+      "line": 38,
+      "cwe": "CWE-494",
+      "snippet": "self.tokenizer = AutoTokenizer.from_pretrained(self.pretrained_model_id, use_fast=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_bits.py",
+      "line": 73,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model_id)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_calibration_data_device.py",
+      "line": 1258,
+      "cwe": "CWE-494",
+      "snippet": "self.tokenizer = AutoTokenizer.from_pretrained(self.NATIVE_MODEL_ID, use_fast=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_diffusion_gemma_support.py",
+      "line": 76,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(MODEL_PATH)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_flash_attention.py",
+      "line": 25,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(self.MODEL_ID)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_gemma4_support.py",
+      "line": 21,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(model_path)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_gguf_qlinear_llama.py",
+      "line": 81,
+      "cwe": "CWE-494",
+      "snippet": "model = AutoModelForCausalLM.from_pretrained("
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_glm_nope_config.py",
+      "line": 26,
+      "cwe": "CWE-494",
+      "snippet": "restored = module.Glm5NextConfig.from_pretrained(tmp_path)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_group_size.py",
+      "line": 53,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model_id)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_hunyuan_ocr_support.py",
+      "line": 163,
+      "cwe": "CWE-494",
+      "snippet": "reloaded = AutoConfig.from_pretrained(tmp_path)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_inference_speed_harness.py",
+      "line": 35,
+      "cwe": "CWE-494",
+      "snippet": "def from_pretrained(cls, _model_path):"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_integration.py",
+      "line": 29,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model_id_or_path)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_k2_horizon_support.py",
+      "line": 216,
+      "cwe": "CWE-494",
+      "snippet": "config = auto.AutoConfig.from_pretrained("
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_lazy_turtle_conversion_mapping.py",
+      "line": 345,
+      "cwe": "CWE-494",
+      "snippet": "def from_pretrained(cls, model_local_path: str, config=None, **kwargs):"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_lfm2_vl_support.py",
+      "line": 35,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(MODEL_PATH, trust_remote_code=False)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_local_model_paths.py",
+      "line": 27,
+      "cwe": "CWE-494",
+      "snippet": "def fake_from_pretrained(cls, model_id_or_path, quantize_config, **kwargs):"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_mimo_gptq_roundtrip.py",
+      "line": 138,
+      "cwe": "CWE-494",
+      "snippet": "hf_config = AutoConfig.from_pretrained(path, trust_remote_code=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_minimax_m3_support.py",
+      "line": 31,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(MODEL_PATH, trust_remote_code=False)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_model.py",
+      "line": 480,
+      "cwe": "CWE-494",
+      "snippet": "cls.tokenizer = AutoTokenizer.from_pretrained(cls.pretrained_model_id, use_fast=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_multi_gpu_inference.py",
+      "line": 31,
+      "cwe": "CWE-494",
+      "snippet": "self.tokenizer = AutoTokenizer.from_pretrained(self.MODEL_PATH, trust_remote_code=True)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_olora_finetuning_xpu.py",
+      "line": 83,
+      "cwe": "CWE-494",
+      "snippet": "model = AutoModelForCausalLM.from_pretrained(base_model, **model_kwargs)"
+     },
+     {
+      "severity": "medium",
+      "file": "tests/test_out_of_model_tensors.py",
+      "line": 415,
+      "cwe": "CWE-494",
+      "snippet": "config = AutoConfig.from_pretrained(model_local_path, trust_remote_code=False)"
+     }
+    ]
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 19,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_exl3_hadamard_simd.py",
+      "line": 88,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_paroquant_direct_input.py",
+      "line": 50,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_paroquant_direct_output.py",
+      "line": 49,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/benchmark_mlx_qwen38_paroquant_rotation_metadata.py",
+      "line": 97,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/test_mlx_dense_methods.py",
+      "line": 150,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/test_mlx_fp8_native.py",
+      "line": 113,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/test_mlx_gptq_output_dtype.py",
+      "line": 123,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/test_mlx_packing.py",
+      "line": 84,
+      "cwe": "CWE-95",
+      "snippet": "mlx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "tests/test_mlx_qqq.py",
+      "line": 204,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_exl3_gss.py",
+      "line": 85,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_exl3_hadamard.py",
+      "line": 108,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_exl3_regularize.py",
+      "line": 248,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output_mean_array)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_exl3_rms.py",
+      "line": 118,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_exl3_tiles.py",
+      "line": 88,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(output)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_gptaq.py",
+      "line": 82,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_native.py",
+      "line": 89,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_paroquant_optimize.py",
+      "line": 265,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_paroquant_quant.py",
+      "line": 138,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     },
+     {
+      "severity": "high",
+      "file": "gptqmodel/quantization/mlx_paroquant_rotation.py",
+      "line": 232,
+      "cwe": "CWE-95",
+      "snippet": "mx.eval(result)"
+     }
+    ]
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 6,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "tests/test_agnes_support.py",
+      "line": 36,
+      "cwe": "CWE-",
+      "snippet": "assert \"shared_input_verified_model_types\" not in AgnesQModel.__dict__"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_shared_input_hessian_dedup_real_model_e2e.py",
+      "line": 157,
+      "cwe": "CWE-",
+      "snippet": "assert all(event[\"status\"] == \"verified\" for event in dedup_telemetry)"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_spark2_5_support.py",
+      "line": 45,
+      "cwe": "CWE-",
+      "snippet": "assert Spark2_5QModel.shared_input_verified(config) is True"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_torch_ops_jit_extension.py",
+      "line": 227,
+      "cwe": "CWE-",
+      "snippet": "assert \"cannot verify torch stable ABI requirement\" in loader.last_error_message()"
+     },
+     {
+      "severity": "low",
+      "file": "tests/module_tree/test_shared_input.py",
+      "line": 44,
+      "cwe": "CWE-",
+      "snippet": "assert verified, f\"{model_cls.__name__} has no shared_input_verified_model_types\""
+     },
+     {
+      "severity": "low",
+      "file": "tests/module_tree/test_shared_input_cpu_forward.py",
+      "line": 239,
+      "cwe": "CWE-",
+      "snippet": "assert verified, f\"{model_type}: add it to {model_cls.__name__}.shared_input_verified_model_types\""
+     }
+    ]
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:f9bb57f8-fdf5-50dd-918e-deb02c1203ef",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T10:11:24Z",
+   "component": {
+    "type": "application",
+    "name": "GPTQMODEL",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/GPTQMODEL@83b357604d34",
+    "purl": "pkg:generic/anticloud/GPTQMODEL@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "Apache-2.0"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": []
+ },
+ "elapsed_seconds": 163.41
+}

@@ -1,0 +1,46 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:f9bb57f8-fdf5-50dd-918e-deb02c1203ef",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-10-06T10:11:24Z",
+  "component": {
+   "type": "application",
+   "name": "GPTQMODEL",
+   "version": "83b357604d34",
+   "bom-ref": "pkg:generic/anticloud/GPTQMODEL@83b357604d34",
+   "purl": "pkg:generic/anticloud/GPTQMODEL@83b357604d34",
+   "licenses": [
+    {
+     "license": {
+      "id": "Apache-2.0"
+     }
+    }
+   ]
+  },
+  "properties": [
+   {
+    "name": "anticloud:source-commit",
+    "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+   },
+   {
+    "name": "anticloud:source-url",
+    "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+   },
+   {
+    "name": "anticloud:tier",
+    "value": "tier-agent"
+   }
+  ]
+ },
+ "components": [],
+ "source": {
+  "git": {
+   "head": null,
+   "url": null,
+   "sha_unverified": true,
+   "note": "contamination removed; resolve via GitHub API before quoting"
+  }
+ }
+}
